@@ -1,0 +1,21 @@
+*, html, body { margin: 0; padding: 0; font-family: sans-serif,Verdana,Arial; outline: medium none !important; }
+header { text-align: center; background: url(../img/128/1403014112_facebook.png) no-repeat left center; width: 400px; height: 150px; border: 1px solid #FFF; margin: 10% auto 2% auto; }
+header h3 { font-family:lucida grande,tahoma,verdana,arial,sans-serif; color: #3B5998; padding: 0; margin: 8% 0px 5px 15%; font-size: 28px; text-shadow: 1px 2px 1px rgba(50, 50, 50, 0.5); }
+header h5 { font-family:lucida grande,tahoma,verdana,arial,sans-serif; color: #3B5998; margin: 0px 0px 5px 15%; padding: 0; font-size: 16px; text-shadow: 1px 2px 1px rgba(50, 50, 50, 0.5); }
+header h5 sup { font-family:sans-serif; color: #FF0000; font-size: 12px; text-shadow: 1px 2px 1px rgba(255, 102, 0, 0.5); }
+div#area_search { margin: 0 auto; width: 550px; height: auto; min-height: 80px; text-align: center; border-radius: 10px; border: 1px solid #CCC; box-shadow: 4px 4px 4px 0px rgba(50, 50, 50, 0.75); }
+div#area_search input#url_photo { margin-top: 5%; padding: 3px; width: 80%; font-size: 12px; height: 16px; line-height: 16px; border: 1px solid #E0E0E0; box-shadow: 2px 2px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
+
+table#tbres { width: 50%; margin: 10px auto; border: 1px solid #CCC; font-family: sans-serif,Verdana,Arial; font-size: 12px; }
+table#tbres thead tr th { padding: 2px; text-align: center; box-shadow: 2px 3px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
+table#tbres thead tr th:first-child { border-right: 1px solid #CCC; }
+table#tbres tbody tr td { padding: 2px; padding-left: 5px; border-top: 1px solid #CCC; line-height: 14px; }
+table#tbres tbody tr td:first-child { border-right: 1px solid #CCC; }
+
+footer { text-align: center; position: fixed; width: 60%; height: 20px; top: auto; right: 0; bottom: 0; left: 0; margin: 0 auto; border: 1px solid #CCC; border-bottom: 0px; background: #3B5998; box-shadow: 2px 2px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
+footer span { font-weight: bold; border: 0px; font-size: 10px; line-height: 20px; color: #FFF; }
+footer span a { text-decoration: none; color: #FFF; margin: 0px; padding: 0px; cursor: help; border-bottom: 1px dotted #FFF; }
+
+.btn { display: inline-block; margin-left: 5px; font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif; -moz-user-select: none; background-image: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: normal; line-height: 1.42857; margin-bottom: 0; padding: 6px 12px; text-align: center; vertical-align: middle; white-space: nowrap; text-decoration: none; }
+.btn-primary { background-color: #5e87b0; border-color: #507aa4; color: #ffffff; text-shadow: 1px 2px 1px rgba(50, 50, 50, 0.5); box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.75); }
+.clear { clear: both; }
