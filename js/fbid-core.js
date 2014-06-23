@@ -75,6 +75,8 @@ $(window).load(function() {
 			var photo_fb = $('#url_photo').val();
 			photo_fb = photo_fb.trim();
 
+			$('#loading-data').css('display', 'block');
+
 			//	Check if variable is fill
 			if (!empty(photo_fb)) {
 
@@ -89,9 +91,13 @@ $(window).load(function() {
 						cache: false,
 						success: function(res) {
 
+							$('#loading-data').css('display', 'none');
+
 							//	Show results of search
 							if (!empty(res))
 								$('#resp_search').empty().html(res);
+							else
+								alert('An error has occurred');
 
 						}
 					});

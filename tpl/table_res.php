@@ -9,7 +9,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			".$search_response."
+			%s
 		</tbody>
 	</table>
 	<div class='clear'>&nbsp;</div>";

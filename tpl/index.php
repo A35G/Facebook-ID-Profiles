@@ -21,8 +21,14 @@
 	<div id="area_search">
 		<form name="frmProfileSearch">
 			<input type='text' name='url_bsend' value="" id='url_photo' placeholder="Insert a picture URL..." />
-			<a href='javascript:;' id='analyze_field' class='btn btn-primary' title='Analizza URL e Ricerca Profilo'>Analizza</a>
+			<a href='javascript:;' id='analyze_field' class='btn btn-primary' title='Scans URL and search profile'>Scan</a>
 		</form>
+	</div>
+
+	<div id='loading-data'>
+		<span>Loading...</span>
+		<br />
+		<img src='./img/loader.gif' alt='Loading data' />
 	</div>
 
 	<div id="resp_search"></div>

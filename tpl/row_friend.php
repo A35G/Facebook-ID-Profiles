@@ -3,7 +3,7 @@
 	$tpl_row = "
 		<tr>
 			<td>fbid:</td>
-			<td>".$fbres."</td>
+			<td>%s</td>
 		</tr>
 		<tr>
 			<td>id:</td>

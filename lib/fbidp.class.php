@@ -18,6 +18,7 @@
 
 	class FacebookID {
 
+		//	Google IP for test
 		var $test_conn = "http://74.125.228.100";
 		private $fbid;
 		private $profileid;
@@ -27,6 +28,11 @@
 			$this->info = array();
 		}
 
+	/**
+	 * Use cURL library to get data by Facebook URL
+	 * @param  [String] $url_navigate:	URL to reach to pick up the information
+	 * @return [String/Array]						If true, return array of data, else return false
+	 */
 		private function navigate_fb($url_navigate) {
 
 			$curl = curl_init();
@@ -35,7 +41,7 @@
 					CURLOPT_RETURNTRANSFER => 1,
 					CURLOPT_URL => $url_navigate,
 					CURLOPT_SSL_VERIFYPEER => false,
-					CURLOPT_USERAGENT => 'What is your profile? - https://github.com/A35G/'
+					CURLOPT_USERAGENT => 'What is your profile? - https://github.com/A35G/Facebook-ID-Profiles'
 			));
 
 			$resp = curl_exec($curl);
@@ -50,6 +56,11 @@
 
 		}
 
+		/**
+		 * Function to check if URL passed, is valid
+		 * @param  [String] $url_test:	URL to visit
+		 * @return [String]							True/False
+		 */
     public function checkUrl($url_test) {
 
       // SCHEME
@@ -75,7 +86,7 @@
 
 		private function validate_url_photo($url_photo) {
 
-			if (preg_match("/[0-9]*_[0-9]*_[0-9]*_[a-z].jpg/", $url_photo))
+			if (preg_match("/[0-9]*_[0-9]*_[0-9]*_[a-z].[jpg-png]/", $url_photo))
 				return true;
 			else
 				return false;
@@ -127,6 +138,10 @@
 
 		}
 
+		public function entityd($args) {
+			return stripslashes(html_entity_decode(htmlspecialchars($args, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'));
+		}
+
 		public function getProfile($url_photo) {
 
 			if ($this->navigate_fb($this->test_conn) && $this->validate_url_photo($url_photo))
@@ -138,12 +153,10 @@
 
 			if (!$this->profileid) {
 
-				$fbres = $this->fbid;
-
 				if (file_exists('../tpl/row_friend.php'));
 					include('../tpl/row_friend.php');
 
-				$rivs .= $tpl_row;
+				$rivs .= sprintf($tpl_row, $this->fbid);
 
 			} else {
 
@@ -152,12 +165,24 @@
 				foreach ($this->info as $fbattr => $fbval) {
 
 					$attrib = $fbattr;
-					$fbres = stripslashes(htmlentities(htmlspecialchars($fbval, ENT_QUOTES, 'UTF-8'), ENT_QUOTES, 'UTF-8'));
+
+					if (!is_array($fbval)) {
+
+						$fbres = $this->entityd($fbval);
+
+					} else {
+
+						print_r($fbval);
+						foreach ($fbval as $thnf => $dataf) {
+
+							$fbres = $this->entityd($dataf);
+						}
+					}
 
 					if (file_exists('../tpl/row_res.php'))
 						include('../tpl/row_res.php');
 
-					$rivs .= $tpl_row;
+					$rivs .= sprintf($tpl_row, $fbattr, $fbres);
 
 				}
 
@@ -165,12 +190,10 @@
 
 				if (!empty($rivs)) {
 
-					$search_response = $rivs;
-
 					if (file_exists('../tpl/table_res.php'))
 						include('../tpl/table_res.php');
 
-					return $tpl_table;
+					return sprintf($tpl_table, $rivs);
 
 				}
 

@@ -2,7 +2,7 @@
 
 	$tpl_row = "
 		<tr>
-			<td>".$attrib."</td>
-			<td>".$fbres."</td>
+			<td>%s</td>
+			<td>%s</td>
 		</tr>
 	";

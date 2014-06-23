@@ -6,6 +6,10 @@ header h5 sup { font-family:sans-serif; color: #FF0000; font-size: 12px; text-sh
 div#area_search { margin: 0 auto; width: 550px; height: auto; min-height: 80px; text-align: center; border-radius: 10px; border: 1px solid #CCC; box-shadow: 4px 4px 4px 0px rgba(50, 50, 50, 0.75); }
 div#area_search input#url_photo { margin-top: 5%; padding: 3px; width: 80%; font-size: 12px; height: 16px; line-height: 16px; border: 1px solid #E0E0E0; box-shadow: 2px 2px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
 
+div#loading-data { display: none; width: 250px; margin: 10px auto; text-align: center; font-family: sans-serif,Verdana,Arial; font-size: 12px; }
+div#loading-data span { font-weight: bold; }
+div#loading-data img { border: 0px; }
+
 table#tbres { width: 50%; margin: 10px auto; border: 1px solid #CCC; font-family: sans-serif,Verdana,Arial; font-size: 12px; }
 table#tbres thead tr th { padding: 2px; text-align: center; box-shadow: 2px 3px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
 table#tbres thead tr th:first-child { border-right: 1px solid #CCC; }
