@@ -56,6 +56,19 @@ $(window).load(function() {
 
 	}
 
+	//	Bind the click at tag 'A', content into the form
+	$('body').on('click', 'a#reset-voice', function(e) {
+
+		e.preventDefault();
+
+		//	Reset content of the div for result of search
+		$('#resp_search').empty();
+
+		//	Reset value of field in the form
+		$('#url_photo').val('');
+
+	})
+
 	$(function(){
 
 		//	Reset value of field in the form
@@ -71,6 +84,9 @@ $(window).load(function() {
 		$('body').on('click', 'a#analyze_field', function(e) {
 
 			e.preventDefault();
+
+			//	Reset content of the div for result of search
+			$('#resp_search').empty();
 
 			var photo_fb = $('#url_photo').val();
 			photo_fb = photo_fb.trim();

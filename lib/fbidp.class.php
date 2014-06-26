@@ -172,11 +172,25 @@
 
 					} else {
 
-						print_r($fbval);
+						//print_r($fbval);
+						$fbres = "<table cellpadding='2' cellspacing='0' style='margin: 2px; border: 1px solid #CCC;'>
+						<thead>
+							<tr>
+								<th>FB Sub-Attribute:</th>
+								<th>FB Response:</th>
+							</tr>
+						</thead>
+						<tbody>";
 						foreach ($fbval as $thnf => $dataf) {
 
-							$fbres = $this->entityd($dataf);
+							//	Temporary
+							if (is_array($dataf))
+								$dataf = json_encode($dataf);
+
+							$fbres .= "<tr><td>".$thnf.':</td><td>'.$this->entityd($dataf).'</td></tr>';
 						}
+						$fbres .= '</tbody>
+						</table>';
 					}
 
 					if (file_exists('../tpl/row_res.php'))

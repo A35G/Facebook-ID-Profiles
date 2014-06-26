@@ -3,8 +3,10 @@ header { text-align: center; background: url(../img/128/1403014112_facebook.png)
 header h3 { font-family:lucida grande,tahoma,verdana,arial,sans-serif; color: #3B5998; padding: 0; margin: 8% 0px 5px 15%; font-size: 28px; text-shadow: 1px 2px 1px rgba(50, 50, 50, 0.5); }
 header h5 { font-family:lucida grande,tahoma,verdana,arial,sans-serif; color: #3B5998; margin: 0px 0px 5px 15%; padding: 0; font-size: 16px; text-shadow: 1px 2px 1px rgba(50, 50, 50, 0.5); }
 header h5 sup { font-family:sans-serif; color: #FF0000; font-size: 12px; text-shadow: 1px 2px 1px rgba(255, 102, 0, 0.5); }
+
 div#area_search { margin: 0 auto; width: 550px; height: auto; min-height: 80px; text-align: center; border-radius: 10px; border: 1px solid #CCC; box-shadow: 4px 4px 4px 0px rgba(50, 50, 50, 0.75); }
 div#area_search input#url_photo { margin-top: 5%; padding: 3px; width: 80%; font-size: 12px; height: 16px; line-height: 16px; border: 1px solid #E0E0E0; box-shadow: 2px 2px 5px #CCC; -webkit-box-shadow: 2px 2px 5px #CCC; -moz-box-shadow: 3px -3px 5px #CCC; }
+div#area_search a#reset-voice { cursor: pointer; font-family: sans-serif,Verdana,Arial; font-size: 11px; text-decoration: none; float: right; margin-top: 7px; margin-right: 5%; clear: both; }
 
 div#loading-data { display: none; width: 250px; margin: 10px auto; text-align: center; font-family: sans-serif,Verdana,Arial; font-size: 12px; }
 div#loading-data span { font-weight: bold; }

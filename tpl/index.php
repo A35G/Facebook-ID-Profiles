@@ -21,7 +21,9 @@
 	<div id="area_search">
 		<form name="frmProfileSearch">
 			<input type='text' name='url_bsend' value="" id='url_photo' placeholder="Insert a picture URL..." />
-			<a href='javascript:;' id='analyze_field' class='btn btn-primary' title='Scans URL and search profile'>Scan</a>
+			<a id='analyze_field' class='btn btn-primary' title='Scans URL and search profile'>Scan</a>
+			<br />
+			<a title='Reset field/result of search...' id='reset-voice'>Reset</a>
 		</form>
 	</div>
 
